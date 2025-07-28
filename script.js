@@ -10,7 +10,7 @@ const svg = d3.select("#vis-container")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 // Load CSV
-d3.csv("data/global_temp.csv").then(data => {
+d3.csv("/global_temp.csv").then(data => {
   data.forEach(d => {
     d.Year = +d.Year;
     d.Anomaly = +d.Anomaly;
